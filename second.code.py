@@ -1,0 +1,1 @@
+print("Eto vtoroi code")
