@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import product_view, success_page
+from .views import user_login, user_logout
 
 urlpatterns = [
-    path('products/', product_view, name='product_form'),
-    path('success/', success_page, name='success_page'),
+    path('login/', user_login, name='login'),
+    path('logout/', user_logout, name='logout'),
 ]
