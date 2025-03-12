@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+</head>
+<body>
+    <h1>Students and their courses</h1>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.name }} - Courses: 
+                {% for course in student.courses.all %}
+                    {{ course.title }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
